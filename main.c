@@ -36,11 +36,18 @@ int main(int argc, char **argv){
 
         printf("Peso: ");
         scanf("%f", &peso);
+
+        // Validación de numero
+        if(peso<0) {
+            printf("Numero invalido\n");
+            exit(1);
+        }
+
         printf("Altura: ");
         scanf("%f", &altura);
 
         // Validación del numero
-        if(peso<0 || altura<0) {
+        if(altura<0) {
             printf("Numero invalido\n");
             exit(1);
         }
