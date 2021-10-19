@@ -14,11 +14,11 @@ int main(int argc, char **argv){
 		switch(c){
 			case 'p':
 				elementos = atoi(optarg);
-                if (elementos = 0) {
+                if(elementos = 0) {
                     printf ("Numero de personas invalido");
                     exit(1);
                 }
-                else if (elementos < 0) {
+                else if(elementos < 0) {
                     printf("Numero de personas invalido");
                     exit(1);
                 }
