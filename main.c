@@ -25,7 +25,7 @@ int main(int argc, char **argv){
 				exit(1);
 		}
 	}
-
+    
 	//Los resultados de sus calculos van en estas variables.
 	//Puede declarar más variables si lo necesita.
 	float sum = 0.0f;
