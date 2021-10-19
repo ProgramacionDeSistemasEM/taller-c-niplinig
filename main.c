@@ -7,8 +7,6 @@ int main(int argc, char **argv){
 	int elementos = 0;
 	char c = 0;
 
-
-
 	//Aqui manejamos las opciones.
 	//El argumento -p tiene un argumento, que es
 	//el numero de elementos a pedir (por eso el :)
@@ -16,6 +14,14 @@ int main(int argc, char **argv){
 		switch(c){
 			case 'p':
 				elementos = atoi(optarg);
+                if (elementos = 0) {
+                    printf ("Numero de personas invalido");
+                    exit(1);
+                }
+                else if (elementos < 0) {
+                    printf("Numero de personas invalido");
+                    exit(1);
+                }
 				break;
 			default:
 				printf("Argumento invalido\n");
@@ -28,7 +34,10 @@ int main(int argc, char **argv){
 	float sum = 0.0f;
 	float max_imc = 0.0f;
 
-
+    for (int i=0; i< elementos; i++){
+        printf("Peso: ");
+        printf("Altura: ");
+    }
 
 
 	//No modifique estas lineas
