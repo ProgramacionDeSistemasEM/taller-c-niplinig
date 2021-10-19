@@ -35,12 +35,14 @@ int main(int argc, char **argv){
 	float max_imc = 0.0f;
 
     for (int i=0; i< elementos; i++){
-        float peso = 0.0f;
-        float altura = 0.0f;
+        double peso = 0.0f;
+        double altura = 0.0f;
+
         printf ("Peso: ");
-        scanf("%.2f\n", &peso);
+        scanf("%lf", &peso);
         printf("Altura: ");
-        scanf("%.2f\n", &altura);
+        scanf("%lf", &altura);
+
         float imc = peso / (altura * altura);
         sum += imc;
 
