@@ -1,0 +1,6 @@
+*.o
+*.py
+__pycache__/*
+datagen.py
+test_data
+imc
