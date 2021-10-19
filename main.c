@@ -40,8 +40,8 @@ int main(int argc, char **argv){
         scanf("%f", &altura);
 
         // Validación del numero
-        if(peso<0 || altura<0) {
-            printf ("Nuemro invalido\n");
+        if(peso<0 | altura<0) {
+            printf ("Numero invalido\n");
             exit(1);
         }
 
