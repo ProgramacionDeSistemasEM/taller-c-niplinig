@@ -34,14 +34,14 @@ int main(int argc, char **argv){
         float peso = 0.0f;
         float altura = 0.0f;
 
-        printf ("Peso: ");
+        printf("Peso: ");
         scanf("%f", &peso);
         printf("Altura: ");
         scanf("%f", &altura);
 
         // Validación del numero
-        if(peso<0 | altura<0) {
-            printf ("Numero invalido\n");
+        if(peso<0 || altura<0) {
+            printf("Numero invalido\n");
             exit(1);
         }
 
