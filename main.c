@@ -14,6 +14,7 @@ int main(int argc, char **argv){
 		switch(c){
 			case 'p':
 				elementos = atoi(optarg);
+                //Validación de entrada
                 if(elementos <= 0) {
                     printf ("Numero de personas invalido\n");
                     exit(1);
@@ -37,7 +38,7 @@ int main(int argc, char **argv){
         printf("Peso: ");
         scanf("%f", &peso);
 
-        // Validación de numero
+        //Validación de entrada
         if(peso<0) {
             printf("Numero invalido\n");
             exit(1);
@@ -46,20 +47,25 @@ int main(int argc, char **argv){
         printf("Altura: ");
         scanf("%f", &altura);
 
-        // Validación del numero
+        //Validación de entrada
         if(altura<0) {
             printf("Numero invalido\n");
             exit(1);
         }
 
+        //Sacando el imc utilizando la formula
         float imc = peso / (altura * altura);
+
+        // Sumamos los imc para después sacar el promedio
         sum += imc;
 
+        //Validamos si el nuevo imc es el maximo
         if(imc > max_imc) {
             max_imc = imc;
         }
     }
 
+    //Sacamos el promedio
     sum = sum/elementos;
 
 	//No modifique estas lineas
