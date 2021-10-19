@@ -14,12 +14,12 @@ int main(int argc, char **argv){
 		switch(c){
 			case 'p':
 				elementos = atoi(optarg);
-                if(elementos = 0) {
-                    printf ("Numero de personas invalido");
+                if(elementos == 0) {
+                    printf ("Numero de personas invalido\n");
                     exit(1);
                 }
                 else if(elementos < 0) {
-                    printf("Numero de personas invalido");
+                    printf("Numero invalido\n");
                     exit(1);
                 }
 				break;
@@ -35,10 +35,19 @@ int main(int argc, char **argv){
 	float max_imc = 0.0f;
 
     for (int i=0; i< elementos; i++){
-        printf("Peso: ");
-        printf("Altura: ");
+        float peso;
+        float altura;
+        scanf("Peso: %.2f\n", &peso);
+        scanf("Altura: %.2f\n", &altura);
+        float imc = peso / (altura * altura);
+        sum += imc;
+
+        if(imc > max_imc) {
+            max_imc = imc;
+        }
     }
 
+    sum = sum/elementos;
 
 	//No modifique estas lineas
 	//Guarde los resultados en las
